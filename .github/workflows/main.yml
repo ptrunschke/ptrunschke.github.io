@@ -1,0 +1,27 @@
+name: Jekyll Deploy
+on:
+  push:
+    branches: [master]
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Build & Deploy to GitHub Pages
+        # uses: helaili/jekyll-action@2.0.4
+        run: |
+          echo "Set bundle config"
+          bundle config path "$PWD/vendor/bundle"
+          echo "Run bundle install"
+          bundle install
+          echo "Execute jekyll build"
+          # bundle exec ${BUNDLE_ARGS} jekyll build -s ${GITHUB_WORKSPACE}/${JEKYLL_SRC} -d build ${INPUT_JEKYLL_BUILD_OPTIONS}
+          bundle exec jekyll build -s ${GITHUB_WORKSPACE} -d build
+        env:
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
