@@ -15,10 +15,10 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Create icons
         run: |
-          add-apt-repository universe
-          add-apt-repository ppa:inkscape.dev/stable
-          apt-get update
-          apt install inkscape
+          sudo add-apt-repository universe
+          sudo add-apt-repository ppa:inkscape.dev/stable
+          sudo apt-get update
+          sudo apt install inkscape
           python create_icons.py
       - name: Build & Deploy to GitHub Pages
         uses: helaili/jekyll-action@2.0.4
