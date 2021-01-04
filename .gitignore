@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 vendor
 *.sw[pon]
+apple-touch-icon-*.png
+favicon-*.png
+_includes/head_custom.html

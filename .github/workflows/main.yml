@@ -13,6 +13,13 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+      - name: Create icons
+        runs: |
+          add-apt-repository universe
+          add-apt-repository ppa:inkscape.dev/stable
+          apt-get update
+          apt install inkscape
+          python create_icons.py
       - name: Build & Deploy to GitHub Pages
         uses: helaili/jekyll-action@2.0.4
         with:
