@@ -14,7 +14,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Create icons
-        runs: |
+        run: |
           add-apt-repository universe
           add-apt-repository ppa:inkscape.dev/stable
           apt-get update
