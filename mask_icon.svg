@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="20.168mm" viewBox="0 0 71.461212 71.461212" width="20.168mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <!-- <rect id="background" width="100%" height="100%" fill="#e8e8e8"/> -->
+ <g stroke="#000000" stroke-width="2">
+  <path id="P-vertical"   d="m9.97 10.39v56.897"/>
+  <path id="P-horizontal" d="m9.97 12.39h27.411"/>
+  <path id="P-diagonal"   d="m9.97 38.8 27.411-28.406"/>
+ </g>
+ <g stroke="#000000" stroke-width="2">
+  <path id="T-vertical"   d="m37.38 10.39v56.897"/>
+  <path id="T-horizontal" d="m9.81 8.52h58.19"/>
+ </g>
+ <g stroke="#000000" fill="#000000" stroke-width="1px">
+  <circle id="P-top"    cy="10.22" cx="9.88"  r="4.5"/>
+  <circle id="P-middle" cy="38.66" cx="9.87"  r="4.5"/>
+  <circle id="P-right"  cy="10.22" cx="37.42" r="4.5"/>
+ </g>
+</svg>
